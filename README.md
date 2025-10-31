@@ -1,15 +1,20 @@
-# Credit Risk Default Model
+# Credit Risk Default Modeling
 
-This project develops a predictive model for assessing **municipal and corporate credit default risk** using a combination of **principal component analysis (PCA)** and **supervised learning techniques**. The model aims to identify key financial, demographic, and policy variables that explain variations in timely debt repayment and default probability.
+This project predicts **credit card default risk** using **logistic regression** and **bootstrap inference** on the `Default` dataset from the ISLP library. The goal is to estimate the probability of default based on **balance**, **income**, **student status**, and **delinquencies** and evaluate model performance through validation and resampling.
 
 ## Overview
 
-* Built a **classification framework** to estimate default risk based on factors such as income levels, property values, tax base, delinquency rates, and operating margins.
-* Applied **PCA** to reduce dimensionality and extract latent factors capturing macro-financial and socioeconomic trends.
-* Trained and compared models including **Logistic Regression**, **Random Forests**, and **Support Vector Machines (SVM)** to evaluate performance across accuracy, AUC, and interpretability.
-* Conducted **Monte Carlo simulations** to test scenario robustness under varying economic stress conditions.
+* Built logistic regression models to predict default using financial and demographic variables.
+* Compared model accuracy using **validation set errors** across multiple train-test splits.
+* Implemented **bootstrap resampling** to estimate standard errors of income and balance coefficients.
+* Verified that bootstrap and analytical SEs were highly consistent, confirming model stability.
 
-## Tools & Libraries
+## Key Results
 
-Python | pandas | scikit-learn | NumPy | Matplotlib | Seaborn
+* **Balance** strongly predicts default likelihood.
+* Adding **student status** provided minimal accuracy improvement.
+* Larger training samples reduced validation error.
 
+## Tools
+
+Python | pandas | NumPy | statsmodels | scikit-learn | ISLP | matplotlib
